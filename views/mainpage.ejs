@@ -1,0 +1,33 @@
+<%- include('guestheader') %>
+
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="<%= rootUrl %>/articles">Home</a></li>
+  <li role="presentation"><a href="<%= rootUrl %>/aboutme">About me</a></li>
+</ul>
+
+<div class="mainpageContent">
+    <div class="row">
+        <div class="col-md-8">
+            <% articles.forEach(function(article){ %>
+                <%- include('./components/mainpagearticle', {article : article}) %>
+            <% }) %>        
+        </div>
+        <div class="col-md-3 col-md-offset-1">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        标签
+                    </h3>
+                </div>
+                <div class="panel-body categorylist">
+                    <% category.forEach(function(item){ %>
+                        <a class="label" href="<%= rootUrl %>/category/<%= item, {item : item} %>"><%= item, { item : item } %></a>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include('guestfooter') %>

@@ -1,0 +1,16 @@
+<%- include('header') %>
+
+<h1 class="signinheader">admin</h1>
+
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="<%= rootUrl %>/admin/articles">已发布的文章</a></li>
+  <li role="presentation"><a href="<%= rootUrl %>/admin/publish">发布新文章</a></li>
+</ul>
+
+<div class="mainpageContent">
+    <% articles.forEach(function(article){ %>
+        <%- include('./components/article', {article : article}) %>
+    <% }) %>
+</div>
+
+<%- include('footer') %>

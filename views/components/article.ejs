@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <%= article.title %>
+            <a href="articles/<%= article._id %>/delete" class="label label-danger pull-right">删除</a>
+            <a href="articles/<%= article._id %>/update" class="label label-success pull-right">编辑</a>
+        </h3>
+    </div>
+    <div class="panel-body abstract">
+        <%- article.content %>
+    </div>
+</div>

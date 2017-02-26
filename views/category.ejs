@@ -1,0 +1,15 @@
+<%- include('guestheader') %>
+
+<div class="mainpageContent">
+    <ol class="breadcrumb">
+        <li><a href="<%= rootUrl %>/articles">home</a></li>
+        <li class="active"><%= category %></li>
+    </ol>
+    
+    <% articles.forEach(function(article){ %>
+        <%- include('./components/mainpagearticle', {article : article}) %>
+    <% }) %>  
+
+</div>
+
+<%- include('guestfooter') %>

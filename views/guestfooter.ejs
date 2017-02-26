@@ -1,0 +1,29 @@
+    </div>
+    <script>
+        $(function(){
+            var iNow = -1000; 
+            setInterval(function(){
+			    $('.header').css('backgroundPosition', iNow + 'px 0');	
+			    iNow+=3;
+                if(iNow > 500){
+                    iNow = -1000;
+                }
+		    },10)
+        })
+    </script>
+    <script>
+        $(function(){
+            var list = ['label-default', 'label-primary', 'label-success', 'label-info', 'label-warning', 'label-danger'];
+            $('.label').each(function(){
+                var index = Math.floor(Math.random() * 6);
+                $(this).addClass(list[index]);
+            })
+        })
+    </script>
+    <script>
+        $(function(){   
+            $('.message').animate({opacity : 0}, 4000);
+        })
+    </script>
+</body>
+</html>
